@@ -336,10 +336,10 @@ Model_Path = os.path.join('Array-Optimization', 'Training', 'Saved Models', 'PPO
 model = PPO.load(Model_Path, env=env)
 
 # UNCOMMENT THESE LINES OF CODE AND COMMENT THE TWO LINES DIRECTLY ABOVE TO TRAIN A NEW MODEL
-# model = A2C('MlpPolicy', env, verbose=1)
+# model = PPO('MlpPolicy', env, verbose=1)
 # model.learn(total_timesteps=1000000)
 # model.save(Model_Path)
 
 # evalutaing the performance of the Snake for the given episodes
-evaluation = evaluate_policy(model, model.get_env(), n_eval_episodes=2, render=True)
+evaluation = evaluate_policy(model, model.get_env(), n_eval_episodes=5, render=True)
 print(evaluation)
