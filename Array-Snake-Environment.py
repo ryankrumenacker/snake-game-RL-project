@@ -330,6 +330,7 @@ env = Monitor(SnakeEnv(game_snake, food_tile))
 # this is used to check if the environment is 
 # check_env(env)
 
+# MAKE SURE TO CHANGE THE PATH
 Model_Path = os.path.join('Array-Optimization', 'Training', 'Saved Models', 'PPO-Model-Snake-1m')
 model = PPO.load(Model_Path, env=env)
 
