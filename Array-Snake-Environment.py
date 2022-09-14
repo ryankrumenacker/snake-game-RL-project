@@ -327,31 +327,17 @@ log_path = os.path.join('Array-Optimization','Training', 'Logs')
 
 env = Monitor(SnakeEnv(game_snake, food_tile))
 
-# episodes = 1
-# for episode in range(1, episodes + 1):
-#     obs = env.reset()
-#     done = False
-#     score = 0
-
-#     clock = pygame.time.Clock()
-#     while not done:
-#         clock.tick(FPS)
-#         env.render()
-#         action = env.action_space.sample()
-#         obs, reward, done, info = env.step(action)
-#         print(obs)
-#         score += reward
-#     print(f'Episode: {episode}, Score: {score}')
-# env.close()
-
+# this is used to check if the environment is 
 # check_env(env)
 
 Model_Path = os.path.join('Array-Optimization', 'Training', 'Saved Models', 'PPO-Model-Snake-1m')
 model = PPO.load(Model_Path, env=env)
 
+# UNCOMMENT THESE LINES OF CODE AND COMMENT THE TWO LINES DIRECTLY ABOVE TO TRAIN A NEW MODEL
 # model = A2C('MlpPolicy', env, verbose=1)
 # model.learn(total_timesteps=1000000)
 # model.save(Model_Path)
 
+# evalutaing the performance of the Snake for the given episodes
 evaluation = evaluate_policy(model, model.get_env(), n_eval_episodes=2, render=True)
 print(evaluation)
