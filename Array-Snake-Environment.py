@@ -323,6 +323,7 @@ class SnakeEnv(Env):
 # ACTUAL CODE ----------------------------------------------------------------------------------------------------------------------------
 game_snake = Snake()
 food_tile = Tile(10, 16, False, True, False)
+# MAKE SURE TO CHANGE THE PATH
 log_path = os.path.join('Array-Optimization','Training', 'Logs')
 
 env = Monitor(SnakeEnv(game_snake, food_tile))
