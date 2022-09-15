@@ -1,7 +1,7 @@
 # Reinforcement Learning for Snake Game Project in Python
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/113403062/189812492-6b03500b-57ed-4111-9453-ec6abd43befe.gif" alt="animated" width=500 heigt=500/>
+  <img src="https://user-images.githubusercontent.com/113403062/189812492-6b03500b-57ed-4111-9453-ec6abd43befe.gif" alt="animated" width=700 heigt=700/>
 </p>
 
 *Above is a video of a reinforcement learning model that was trained with the proximal policy optimization (PPO) algorithm for 1M iterations. It averages around a score of 20.*
