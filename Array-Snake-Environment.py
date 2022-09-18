@@ -320,7 +320,7 @@ class SnakeEnv(Env):
     def close(self):
         pygame.quit()
 
-# ACTUAL CODE ----------------------------------------------------------------------------------------------------------------------------
+# REINFORCEMENT LEARNING CODE ----------------------------------------------------------------------------------------------------------------------------
 game_snake = Snake()
 food_tile = Tile(10, 16, False, True, False)
 # MAKE SURE TO CHANGE THE PATH
